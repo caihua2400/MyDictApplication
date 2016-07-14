@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        dataBaseHelper=new MyDataBaseHelper(this,"myDict.db3",1);
+        dataBaseHelper=new MyDataBaseHelper(this,"myDict.db3",2);
         insert=(Button) findViewById(R.id.insert);
         search=(Button) findViewById(R.id.search);
         insert.setOnClickListener(new View.OnClickListener() {

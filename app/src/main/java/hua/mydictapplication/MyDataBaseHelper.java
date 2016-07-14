@@ -14,7 +14,7 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
     final String CREATE_TABLE_SQL="create table " +
             TABLE_NAME+"(_id integer primary key autoincrement, " +
             WORD+" TEXT  , " +
-            DETAIL+"TEXT )";
+            DETAIL+" TEXT )";
     public MyDataBaseHelper(Context context, String name, int version) {
         super(context, name, null, version);
     }
@@ -26,6 +26,7 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+         db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
+         onCreate(db);
     }
 }
