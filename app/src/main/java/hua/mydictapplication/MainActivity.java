@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String searchword=((EditText)findViewById(R.id.key)).getText().toString();
-                Cursor cursor=dataBaseHelper.getReadableDatabase().query("dict",null,"where word=?",new String[]{searchword},null,null,null);
+                Cursor cursor=dataBaseHelper.getReadableDatabase().query("dict",null," word=?",new String[]{searchword},null,null,null);
                 Bundle data=new Bundle();
                 data.putSerializable("data",convertCursorToList(cursor));
                 Intent intent=new Intent(MainActivity.this,DetailActivity.class);
