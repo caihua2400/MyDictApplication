@@ -18,7 +18,8 @@
         <activity android:name=".DetailActivity"></activity>
         <provider
             android:authorities="hua.mydictapplication.dictProvider"
-            android:name=".DictContentProvider"></provider>
+            android:name=".DictContentProvider"
+            android:exported="true"></provider>
     </application>
 
 </manifest>
